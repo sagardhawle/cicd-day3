@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagar - Welcome to CI/CD</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 1s ease-in-out;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .logo-container {
+            margin-top: 40px;
+            display: flex;
+            gap: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            width: 70px;
+            height: 70px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-container img:hover {
+            transform: translateY(-10px);
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sagar, Welcome to CI/CD</h1>
+    <p>Automating the future, one commit at a time.</p>
+
+    <!-- Terraform -->
+<div class="logo-box">
+    <img src="https://www.vectorlogo.zone/logos/terraformio/terraformio-icon.svg" alt="Terraform">
+    <span>Terraform</span>
+</div>
+
+<!-- Git -->
+<div class="logo-box">
+    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git">
+    <span>Git</span>
+</div>
+
+<!-- GitHub -->
+<div class="logo-box">
+    <img src="https://www.vectorlogo.zone/logos/github/github-icon.svg" alt="GitHub">
+    <span>GitHub</span>
+</div>
+
+<!-- CI/CD -->
+<div class="logo-box">
+    <img src="https://www.svgrepo.com/show/354380/ci-cd.svg" alt="CI/CD">
+    <span>CI/CD</span>
+</div>
+
+    <script>
+        // Array of background colors
+        const colors = ['#1a1a2e', '#16213e', '#0f3460', '#533483', '#000000', '#1b1b1b'];
+        let colorIndex = 0;
+
+        function changeBg() {
+            document.body.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }
+
+        // Change color every 2000ms (2 seconds)
+        setInterval(changeBg, 2000);
+        changeBg(); // Initialize first color
+    </script>
+</body>
+</html>
