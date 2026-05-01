@@ -28,7 +28,7 @@ resource "aws_security_group" "web_sg" {
 }
 
 resource "aws_instance" "cicd" {
-  ami           = data.aws_ami.ubuntu.id
+  ami           = data.aws_ami.amazon_linux.id
   instance_type = var.instance_type
   key_name = var.key_name
 
@@ -36,11 +36,11 @@ resource "aws_instance" "cicd" {
 
   user_data = <<-EOF
     #!/bin/bash
-    apt update -y
-    apt install nginx -y
+    yum update -y
+    amazon-linux-extras install nginx1 -y
     systemctl start nginx
     systemctl enable nginx
-    echo "<h1>CI/CD Terraform Website 🚀</h1>" > /var/www/html/index.html
+    echo "<h1>CI/CD Terraform Website 🚀</h1>" > /usr/share/nginx/html/index.html
   EOF
 
   tags = {
