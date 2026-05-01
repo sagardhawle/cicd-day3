@@ -22,9 +22,9 @@ resource "aws_security_group" "web_sg" {
 
 
 resource "aws_instance" "cicd" {
-  ami           = "ami-0f5ee92e2d63afc18"
-  instance_type = "t2.micro"
-
+  ami        = data.aws_ami.amazon_linux.id    
+  instance_type = var.instance_type
+  key_name = var.key_name
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
   user_data = <<-EOF
