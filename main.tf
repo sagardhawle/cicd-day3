@@ -2,17 +2,6 @@ provider "aws" {
   region = var.region
 }
 
-# Get latest Ubuntu AMI (works for ANY region)
-data "aws_ami" "ubuntu" {
-  most_recent = true
-  owners      = ["099720109477"]
-
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
-  }
-}
-
 resource "aws_security_group" "web_sg" {
   name_prefix = "web-sg-"
 
