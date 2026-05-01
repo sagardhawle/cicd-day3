@@ -1,100 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sagar - Welcome to CI/CD</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            transition: background-color 1s ease-in-out;
-            color: white;
-            text-align: center;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Sagar Wellcome To DevOps Learning </title>
 
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-        .logo-container {
-            margin-top: 40px;
-            display: flex;
-            gap: 30px;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-        }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 2s ease;
+      overflow: hidden;
+    }
 
-        .logo-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      color: white;
+      width: 85%;
+      max-width: 900px;
+    }
 
-        .logo-container img {
-            width: 70px;
-            height: 70px;
-            transition: transform 0.3s ease;
-        }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
 
-        .logo-container img:hover {
-            transform: translateY(-10px);
-        }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
 
-        span {
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-    </style>
+    .logos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      align-items: center;
+    }
+
+    .logo-card {
+      background: rgba(255,255,255,0.2);
+      padding: 20px;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-card:hover {
+      transform: scale(1.08);
+    }
+
+    .logo-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .logo-card h3 {
+      font-size: 1rem;
+      color: white;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Sagar, Welcome to CI/CD</h1>
-    <p>Automating the future, one commit at a time.</p>
+  <div class="container">
+    <h1>🚀 DevOps Learning Hub</h1>
+    <p>Learn Git, GitHub, CI/CD, Terraform, and AWS with hands-on practice.</p>
 
-    <!-- Terraform -->
-<div class="logo-box">
-    <img src="https://www.vectorlogo.zone/logos/terraformio/terraformio-icon.svg" alt="Terraform">
-    <span>Terraform</span>
-</div>
+    <div class="logos">
+      <div class="logo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo">
+        <h3>GitHub</h3>
+      </div>
 
-<!-- Git -->
-<div class="logo-box">
-    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git">
-    <span>Git</span>
-</div>
+      <div class="logo-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4494/4494748.png" alt="CI/CD Logo">
+        <h3>CI/CD</h3>
+      </div>
 
+      <div class="logo-card">
+        <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo">
+        <h3>Git</h3>
+      </div>
 
+      <div class="logo-card">
+        <img src="https://www.vectorlogo.zone/logos/terraformio/terraformio-icon.svg" alt="Terraform Logo">
+        <h3>Terraform</h3>
+      </div>
 
-<!-- CI/CD -->
-<div class="logo-box">
-    <img src="https://www.svgrepo.com/show/354380/ci-cd.svg" alt="CI/CD">
-    <span>CI/CD</span>
-</div>
+      <div class="logo-card">
+        <img src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" alt="AWS Logo">
+        <h3>AWS</h3>
+      </div>
+    </div>
 
-    <script>
-        // Array of background colors
-        const colors = ['#1a1a2e', '#16213e', '#0f3460', '#533483', '#000000', '#1b1b1b'];
-        let colorIndex = 0;
+    <footer>
+      Made for DevOps Learning Practice 💻
+    </footer>
+  </div>
 
-        function changeBg() {
-            document.body.style.backgroundColor = colors[colorIndex];
-            colorIndex = (colorIndex + 1) % colors.length;
-        }
+  <script>
+    const colors = [
+      '#1abc9c',
+      '#3498db',
+      '#9b59b6',
+      '#e74c3c',
+      '#f39c12',
+      '#2ecc71',
+      '#34495e'
+    ];
 
-        // Change color every 2000ms (2 seconds)
-        setInterval(changeBg, 2000);
-        changeBg(); // Initialize first color
-    </script>
+    let index = 0;
+
+    function changeBackground() {
+      document.body.style.backgroundColor = colors[index];
+      index = (index + 1) % colors.length;
+    }
+
+    changeBackground();
+    setInterval(changeBackground, 2000);
+  </script>
+
 </body>
 </html>
