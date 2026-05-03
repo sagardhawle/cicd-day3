@@ -1,16 +1,15 @@
-name: First pipeline
+name: First Pipeline
 
-on: 
-push:
+on:
+  push:
 
 jobs:
   test:
+    runs-on: ubuntu-latest
 
-  runs-on: ubuntu-latetst
+    steps:
+      - name: Show Files
+        run: ls
 
-  steps:
-  - name: Show files
-  run: ls
-
-  - name: print massege
-  run: "echo Sagar wellcome to github"
+      - name: Print Message
+        run: echo "Sagar welcome to GitHub"
