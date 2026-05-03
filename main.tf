@@ -101,4 +101,8 @@ HTML
 
 EOF
 
+
+tags = {
+  Name = "demo-ec2"
+}
 }
